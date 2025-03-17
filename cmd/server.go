@@ -2,17 +2,17 @@ package main
 
 import (
 	"context"
-	"musictags-joiner/internal/artists"
-	"musictags-joiner/internal/genres"
-	"musictags-joiner/internal/utils"
+	"github.com/aguart/musictags-joiner/internal/artists"
+	"github.com/aguart/musictags-joiner/internal/genres"
+	"github.com/aguart/musictags-joiner/internal/utils"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
 
-	"github.com/go-chi/chi"
-	"github.com/go-chi/chi/middleware"
+	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
 )
 
@@ -24,7 +24,7 @@ type apiResponse struct {
 	CommitHash string `json:"commit,omitempty"`
 }
 
-//runServer - RUN!
+// runServer - RUN!
 func (app *application) runServer() {
 
 	handler, err := app.createHTTPHandler()
@@ -68,7 +68,7 @@ func (app *application) runServer() {
 	app.logger.Info("Server is stoped")
 }
 
-//createHTTPHandler create handler
+// createHTTPHandler create handler
 func (app *application) createHTTPHandler() (http.Handler, error) {
 	mux := chi.NewMux()
 
@@ -95,7 +95,7 @@ func (app *application) createHTTPHandler() (http.Handler, error) {
 	return mux, nil
 }
 
-//logging - middleware for logging
+// logging - middleware for logging
 func (a *application) logging() func(http.Handler) http.Handler {
 	return func(next http.Handler) http.Handler {
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {

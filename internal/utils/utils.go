@@ -3,8 +3,8 @@ package utils
 import (
 	"bytes"
 	"fmt"
+	"github.com/aguart/musictags-joiner/pkgs/logger"
 	"io/ioutil"
-	"musictags-joiner/pkgs/logger"
 	"net/http"
 	"net/url"
 	"time"
@@ -16,7 +16,7 @@ var (
 	json = jsoniter.ConfigFastest
 )
 
-//SendResponse send response
+// SendResponse send response
 func SendResponse(logger *logger.Logger, w http.ResponseWriter, code int, data interface{}) {
 	w.WriteHeader(code)
 	if err := json.NewEncoder(w).Encode(data); err != nil {

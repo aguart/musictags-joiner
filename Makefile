@@ -10,10 +10,6 @@ ifeq ($(DOTENV_EXISTS), 0)
 	export $(shell sed 's/=.*//' .env)
 endif
 
-vendors:
-	go mod vendor
-	go mod download
-
 test:	
 	go test -v -mod=vendor ./cmd/*.go
 

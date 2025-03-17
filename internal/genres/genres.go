@@ -1,9 +1,9 @@
 package genres
 
 import (
-	"musictags-joiner/internal/utils"
-	"musictags-joiner/pkgs/logger"
-	"musictags-joiner/pkgs/storage"
+	"github.com/aguart/musictags-joiner/internal/utils"
+	"github.com/aguart/musictags-joiner/pkgs/logger"
+	"github.com/aguart/musictags-joiner/pkgs/storage"
 	"net/http"
 	"os"
 

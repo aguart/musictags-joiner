@@ -2,12 +2,13 @@ package main
 
 import (
 	"context"
-	"musictags-joiner/internal/artists"
-	"musictags-joiner/internal/genres"
-	"musictags-joiner/pkgs/logger"
-	"musictags-joiner/pkgs/storage"
 	"os"
 	"sync"
+
+	"github.com/aguart/musictags-joiner/internal/artists"
+	"github.com/aguart/musictags-joiner/internal/genres"
+	"github.com/aguart/musictags-joiner/pkgs/logger"
+	"github.com/aguart/musictags-joiner/pkgs/storage"
 )
 
 const (
