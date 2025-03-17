@@ -1,3 +1,8 @@
+# IDE's
+.idea/
+.vscode/
+
 .bin
 .env
 *.exe
+

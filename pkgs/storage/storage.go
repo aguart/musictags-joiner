@@ -3,7 +3,7 @@ package storage
 import (
 	"context"
 	"fmt"
-	"musictags-joiner/internal/utils"
+	"github.com/aguart/musictags-joiner/internal/utils"
 	"net/url"
 	"os"
 	"strconv"
